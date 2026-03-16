@@ -177,12 +177,12 @@ main {
 .intro-grid h2,
 .contact-card h2 {
   margin: 0;
-  line-height: 1.02;
 }
 
 .hero h1 {
-  max-width: 12ch;
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  max-width: 14ch;
+  font-size: clamp(2.1rem, 4.6vw, 3.9rem);
+  line-height: 1.08;
 }
 
 .hero-text {
@@ -299,7 +299,7 @@ main {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
@@ -335,38 +335,12 @@ main {
   min-height: 100%;
 }
 
-.stat-list,
 .check-list,
 .chip-list,
 .language-list {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.stat-list {
-  display: grid;
-  gap: 18px;
-}
-
-.stat-list li {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--line);
-}
-
-.stat-list li:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.stat-value {
-  min-width: 2.2ch;
-  color: var(--highlight);
-  font-size: 2.25rem;
-  font-weight: 700;
 }
 
 .section {
@@ -458,8 +432,51 @@ main {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.timeline-journey {
+  grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr) 54px minmax(0, 1fr);
+  align-items: start;
+  gap: 0;
+}
+
 .timeline-card {
   position: relative;
+}
+
+.timeline-journey .timeline-card {
+  min-height: 100%;
+  padding-top: 42px;
+}
+
+.timeline-journey .timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 28px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  box-shadow: 0 0 0 6px rgba(212, 239, 232, 0.72);
+}
+
+.timeline-arrow {
+  position: relative;
+  align-self: start;
+  height: 2px;
+  margin: 42px 10px 0;
+  background: linear-gradient(90deg, rgba(15, 118, 110, 0.75), rgba(216, 109, 68, 0.85));
+}
+
+.timeline-arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid var(--highlight);
+  border-right: 2px solid var(--highlight);
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .timeline-date {
@@ -567,6 +584,19 @@ main {
   .timeline-list,
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .timeline-journey {
+    gap: 20px;
+  }
+
+  .timeline-journey .timeline-card {
+    padding-top: 28px;
+  }
+
+  .timeline-journey .timeline-card::before,
+  .timeline-arrow {
+    display: none;
   }
 
   .site-header {
