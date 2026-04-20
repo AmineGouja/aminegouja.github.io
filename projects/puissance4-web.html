@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Détail du projet Puissance 4 Web, un jeu multi-utilisateur en HTML, CSS, JavaScript et PHP."
+  >
+  <title>Puissance 4 Web | Amine Gouja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Retour à l'accueil">
+        <span class="brand-mark">AG</span>
+        <span class="brand-text">Amine Gouja</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../index.html#profil">Profil</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#formation">Formation</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <a class="project-back reveal" href="../index.html#projets">&#8592; Retour aux projets</a>
+
+      <section class="project-hero reveal">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Web full stack</p>
+          <h1>Puissance 4 Web</h1>
+          <p class="project-summary">
+            Projet universitaire de programmation web autour d'un Puissance 4 jouable dans le
+            navigateur. L'application combine HTML, CSS, JavaScript et PHP pour gérer
+            l'interface, la logique de jeu, la synchronisation entre joueurs et le stockage
+            d'un état de partie partagé via un fichier JSON.
+          </p>
+          <div class="project-actions-bar">
+            <a class="button button-primary" href="https://github.com/AmineGouja/Puissance4" target="_blank" rel="noreferrer">
+              Voir le GitHub
+            </a>
+            <a class="button button-secondary" href="../index.html#contact">Me contacter</a>
+          </div>
+        </div>
+
+        <aside class="project-sidecard">
+          <dl>
+            <div>
+              <dt>Période</dt>
+              <dd>2024 - 2025</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>HTML, CSS, JavaScript, PHP, JSON</dd>
+            </div>
+            <div>
+              <dt>Fonctionnel</dt>
+              <dd>Jeu à deux, gestion des tours, victoire, match nul, relance</dd>
+            </div>
+            <div>
+              <dt>Exécution</dt>
+              <dd>Serveur Apache local via XAMPP ou environnement PHP équivalent</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <div class="project-layout">
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Vue d'ensemble</h2>
+            <p>
+              Le projet a été conçu comme une application web complète à petite échelle. Le
+              but n'était pas seulement d'afficher un plateau, mais de gérer un vrai cycle de
+              partie avec choix du camp, règles métier, interaction client-serveur et partage
+              d'état entre plusieurs clients.
+            </p>
+            <ul class="project-stack">
+              <li class="pill">HTML</li>
+              <li class="pill">CSS</li>
+              <li class="pill">JavaScript</li>
+              <li class="pill">PHP</li>
+              <li class="pill">JSON</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Ce que le projet montre</h2>
+            <ul class="project-list">
+              <li>Capacité à réaliser un mini-projet web full stack de bout en bout.</li>
+              <li>Mise en place d'interactions client-serveur avec PHP sans framework lourd.</li>
+              <li>Gestion d'un état partagé sans base de données via un fichier JSON.</li>
+              <li>Implémentation d'une logique de jeu complète avec tours, gravité et victoire.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Points techniques</h2>
+            <ul class="project-list">
+              <li>`jouer.php` applique les règles et met à jour l'état global de la partie.</li>
+              <li>`puissance4.php` génère l'interface selon le contenu du JSON partagé.</li>
+              <li>`puissance4.js` envoie les coups puis actualise régulièrement l'affichage.</li>
+              <li>Le stockage en JSON conserve le plateau, le joueur courant et l'état global.</li>
+              <li>Le projet montre une synchronisation simple entre plusieurs fenêtres ou clients.</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Lancer le projet</h2>
+            <p>
+              Le plus simple est de placer le dossier dans `htdocs` sous XAMPP, de démarrer
+              Apache puis d'ouvrir la page d'accueil du projet dans le navigateur.
+            </p>
+            <pre class="project-code"># Placer le dossier dans htdocs
+# Démarrer Apache
+http://localhost/Puissance4/pageAccueil.html</pre>
+            <div class="project-note">
+              Le stockage fichier reste volontairement simple et adapté à un projet
+              pédagogique. Une évolution naturelle serait de passer à des sessions et à une
+              base de données pour gérer plusieurs parties simultanées.
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

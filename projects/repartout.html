@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Détail du projet Repartout, une application web Java de gestion d'interventions de maintenance."
+  >
+  <title>Repartout | Amine Gouja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Retour à l'accueil">
+        <span class="brand-mark">AG</span>
+        <span class="brand-text">Amine Gouja</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../index.html#profil">Profil</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#formation">Formation</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <a class="project-back reveal" href="../index.html#projets">&#8592; Retour aux projets</a>
+
+      <section class="project-hero reveal">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Java Web</p>
+          <h1>Plateforme REPARTOUT</h1>
+          <p class="project-summary">
+            REPARTOUT est une application web Java de gestion d'interventions de maintenance.
+            Le projet permet de suivre des clients, leurs machines, puis les interventions
+            associées à ces équipements via une interface JSP/Servlets et une petite API REST.
+          </p>
+          <div class="project-actions-bar">
+            <a class="button button-primary" href="https://github.com/AmineGouja/Repartout" target="_blank" rel="noreferrer">
+              Voir le GitHub
+            </a>
+            <a class="button button-secondary" href="../index.html#contact">Me contacter</a>
+          </div>
+        </div>
+
+        <aside class="project-sidecard">
+          <dl>
+            <div>
+              <dt>Période</dt>
+              <dd>2025 - 2026</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Java 17, Maven, JSP/Servlets, JPA, Hibernate, Jersey, H2</dd>
+            </div>
+            <div>
+              <dt>Déploiement</dt>
+              <dd>Application `WAR` déployable sur Tomcat 10</dd>
+            </div>
+            <div>
+              <dt>Fonctionnel</dt>
+              <dd>Clients, machines, interventions, télédiagnostic JSON et API REST</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <div class="project-layout">
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Vue d'ensemble</h2>
+            <p>
+              Le coeur du projet repose sur une architecture Java web classique organisée en
+              couches. L'objectif était de construire une vraie petite application métier,
+              avec modèle de données, persistance, contrôleurs web, vues JSP et endpoints REST
+              pour un usage plus technique.
+            </p>
+            <ul class="project-stack">
+              <li class="pill">Java 17</li>
+              <li class="pill">Maven</li>
+              <li class="pill">JPA</li>
+              <li class="pill">Hibernate</li>
+              <li class="pill">Tomcat 10</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Ce que le projet montre</h2>
+            <ul class="project-list">
+              <li>Conception d'une application Java web structurée en couches claires.</li>
+              <li>Modélisation de relations métier entre `Client`, `Machine` et `Intervention`.</li>
+              <li>Mise en place d'un CRUD serveur avec Servlets et JSP.</li>
+              <li>Exposition d'endpoints REST JSON pour compléter l'interface web.</li>
+              <li>Capacité à empaqueter et déployer une application `WAR` sur Tomcat.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Points techniques</h2>
+            <ul class="project-list">
+              <li>Numérotation automatique des interventions par année.</li>
+              <li>Base H2 en mémoire pour simplifier les démonstrations et les tests manuels.</li>
+              <li>Routes REST pour consulter les interventions et remonter aux machines ou clients associés.</li>
+              <li>Import d'un faux flux de télédiagnostic JSON pour enrichir une intervention existante.</li>
+              <li>Séparation entre modèle métier, accès aux données, web et API.</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Lancer le projet</h2>
+            <p>
+              Le projet se construit avec Maven puis se déploie sur Tomcat 10. Une fois le
+              `WAR` installé, l'application est accessible via le contexte web prévu.
+            </p>
+            <pre class="project-code">mvn package
+# puis déployer le WAR sur Tomcat 10
+# et ouvrir http://localhost:8080/repartoutProject/</pre>
+            <div class="project-note">
+              L'API expose aussi des routes comme `GET /api/interventions` et
+              `POST /api/interventions/{id}/telediag?file=telediag-sample.json`.
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

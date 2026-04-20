@@ -42,6 +42,11 @@
             une expérience terrain entre mai et août 2026 pour mettre en pratique mes bases
             en développement, algorithmique et web.
           </p>
+          <ul class="hero-points">
+            <li>6 projets détaillés</li>
+            <li>Web, Java, C, Julia</li>
+            <li>Stage mai - août 2026</li>
+          </ul>
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Me contacter</a>
             <a class="button button-secondary" href="CV_AMINE_2026.pdf" download>
@@ -83,62 +88,118 @@
       </section>
 
       <section class="section reveal" id="projets">
-        <div class="section-heading">
-          <p class="section-tag">Projets</p>
-          <h2>Des projets qui montrent un socle technique déjà varié.</h2>
+        <div class="section-heading section-heading-inline">
+          <div>
+            <p class="section-tag">Projets</p>
+            <h2>Une sélection de projets à faire défiler comme un catalogue technique.</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Navigation des projets">
+            <button class="carousel-button" type="button" data-carousel-prev aria-label="Voir les projets précédents">
+              &#8592;
+            </button>
+            <button class="carousel-button" type="button" data-carousel-next aria-label="Voir les projets suivants">
+              &#8594;
+            </button>
+          </div>
         </div>
 
-        <div class="cards-grid">
-          <article class="project-card">
-            <div class="project-topline">
-              <span class="pill">2025 - en cours</span>
-              <span class="pill pill-accent">Langage naturel</span>
-            </div>
-            <h3>Plateforme SimSem</h3>
-            <p>
-              Participation au développement d'une plateforme de similarité sémantique pour
-              comparer automatiquement des phrases avec des approches avancées de traitement
-              du langage naturel.
-            </p>
-          </article>
+        <div class="projects-carousel" data-carousel>
+          <div class="projects-viewport">
+            <div class="projects-track">
+              <article class="project-card project-slide">
+                <div class="project-topline">
+                  <span class="pill">2025 - en cours</span>
+                  <span class="pill pill-accent">Langage naturel</span>
+                </div>
+                <h3>Plateforme SimSem</h3>
+                <p>
+                  API FastAPI de similarité sémantique avec métriques natives, modèles
+                  CamemBERT, système de plugins et interface web pour comparer des phrases.
+                </p>
+                <div class="project-actions">
+                  <a class="button button-primary project-button" href="projects/simsem.html">Voir le projet</a>
+                </div>
+              </article>
 
-          <article class="project-card">
-            <div class="project-topline">
-              <span class="pill">SAE d'optimisation</span>
-              <span class="pill pill-accent">Julia</span>
-            </div>
-            <h3>Résolution du problème anneau-étoile</h3>
-            <p>
-              Développement en Julia de plusieurs approches pour résoudre un problème
-              combinatoire d'optimisation : une heuristique, une métaheuristique et une
-              formulation compacte exacte, avec analyse des résultats dans un rapport.
-            </p>
-          </article>
+              <article class="project-card project-slide">
+                <div class="project-topline">
+                  <span class="pill">2024 - 2025</span>
+                  <span class="pill pill-accent">Optimisation</span>
+                </div>
+                <h3>SAE optimisation</h3>
+                <p>
+                  Résolution en Julia du problème anneau-étoile avec heuristique,
+                  métaheuristique et formulation exacte pour comparer plusieurs approches.
+                </p>
+                <div class="project-actions">
+                  <a class="button button-primary project-button" href="projects/sae-optimisation.html">Voir le projet</a>
+                </div>
+              </article>
 
-          <article class="project-card">
-            <div class="project-topline">
-              <span class="pill">2025 - 2026</span>
-              <span class="pill pill-accent">Java EE</span>
-            </div>
-            <h3>Plateforme de gestion REPARTOUT</h3>
-            <p>
-              Conception d'une application web de gestion d'interventions de maintenance
-              industrielle avec Servlets/JSP, JPA, webservices REST et intégration de
-              données JSON.
-            </p>
-          </article>
+              <article class="project-card project-slide">
+                <div class="project-topline">
+                  <span class="pill">2025 - 2026</span>
+                  <span class="pill pill-accent">Java EE</span>
+                </div>
+                <h3>Plateforme REPARTOUT</h3>
+                <p>
+                  Application web Java de gestion de maintenance avec Servlets, JSP,
+                  persistance JPA/Hibernate et endpoints REST pour suivre clients, machines
+                  et interventions.
+                </p>
+                <div class="project-actions">
+                  <a class="button button-primary project-button" href="projects/repartout.html">Voir le projet</a>
+                </div>
+              </article>
 
-          <article class="project-card">
-            <div class="project-topline">
-              <span class="pill">2024 - 2025</span>
-              <span class="pill pill-accent">Algorithmique</span>
+              <article class="project-card project-slide">
+                <div class="project-topline">
+                  <span class="pill">2024 - 2025</span>
+                  <span class="pill pill-accent">C</span>
+                </div>
+                <h3>Codage de Huffman</h3>
+                <p>
+                  Implémentation bas niveau en C d'un système de compression et
+                  décompression fondé sur l'algorithme de Huffman et la manipulation de
+                  fichiers binaires.
+                </p>
+                <div class="project-actions">
+                  <a class="button button-primary project-button" href="projects/codage-huffman.html">Voir le projet</a>
+                </div>
+              </article>
+
+              <article class="project-card project-slide">
+                <div class="project-topline">
+                  <span class="pill">2024 - 2025</span>
+                  <span class="pill pill-accent">PHP</span>
+                </div>
+                <h3>Puissance 4 Web</h3>
+                <p>
+                  Jeu jouable dans le navigateur avec HTML, CSS, JavaScript et PHP, gestion
+                  des tours, synchronisation multi-clients et stockage d'état en JSON.
+                </p>
+                <div class="project-actions">
+                  <a class="button button-primary project-button" href="projects/puissance4-web.html">Voir le projet</a>
+                </div>
+              </article>
+
+              <article class="project-card project-slide">
+                <div class="project-topline">
+                  <span class="pill">2024 - 2025</span>
+                  <span class="pill pill-accent">Java</span>
+                </div>
+                <h3>Ferme autosoutenable</h3>
+                <p>
+                  Simulation orientée objet en Java avec interface Swing pour gérer une
+                  ferme, ses ressources, ses animaux, ses cultures et une progression
+                  saisonnière.
+                </p>
+                <div class="project-actions">
+                  <a class="button button-primary project-button" href="projects/ferme-autosoutenable.html">Voir le projet</a>
+                </div>
+              </article>
             </div>
-            <h3>Codage de Huffman</h3>
-            <p>
-              Réalisation d'un programme de compression et décompression de fichiers texte
-              fondé sur des structures de données complexes et un codage de Huffman.
-            </p>
-          </article>
+          </div>
         </div>
       </section>
 

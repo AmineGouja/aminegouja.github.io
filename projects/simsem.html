@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Détail du projet SimSem, une plateforme FastAPI de similarité sémantique avec métriques NLP, plugins et interface web."
+  >
+  <title>SimSem | Amine Gouja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Retour à l'accueil">
+        <span class="brand-mark">AG</span>
+        <span class="brand-text">Amine Gouja</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../index.html#profil">Profil</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#formation">Formation</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <a class="project-back reveal" href="../index.html#projets">&#8592; Retour aux projets</a>
+
+      <section class="project-hero reveal">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Langage naturel</p>
+          <h1>Plateforme SimSem</h1>
+          <p class="project-summary">
+            SimSem est une API FastAPI de calcul de similarité sémantique entre phrases.
+            Le projet combine des métriques natives, des modèles plus avancés comme
+            CamemBERT, un système de plugins et une interface web intégrée pour utiliser
+            le service directement depuis un navigateur.
+          </p>
+          <div class="project-actions-bar">
+            <a class="button button-primary" href="https://github.com/Tristan-1107/SimilariteSemantique" target="_blank" rel="noreferrer">
+              Voir le GitHub
+            </a>
+            <a class="button button-secondary" href="../index.html#contact">Me contacter</a>
+          </div>
+        </div>
+
+        <aside class="project-sidecard">
+          <dl>
+            <div>
+              <dt>Période</dt>
+              <dd>2025 - en cours</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Python, FastAPI, spaCy, sentence-transformers, tests Pytest</dd>
+            </div>
+            <div>
+              <dt>Type</dt>
+              <dd>API web, interface utilisateur, plugins de métriques</dd>
+            </div>
+            <div>
+              <dt>Livrables</dt>
+              <dd>API JSON, interface web, upload batch et documentation interactive</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <div class="project-layout">
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Vue d'ensemble</h2>
+            <p>
+              L'objectif était de construire une plateforme capable de comparer des phrases
+              selon plusieurs approches, tout en gardant une architecture extensible.
+              Le projet expose des endpoints pour la comparaison simple, le traitement batch
+              par fichier JSON, la liste des métriques disponibles, et propose en parallèle
+              une interface web prête à l'emploi.
+            </p>
+            <ul class="project-stack">
+              <li class="pill">FastAPI</li>
+              <li class="pill">spaCy</li>
+              <li class="pill">CamemBERT</li>
+              <li class="pill">Plugins</li>
+              <li class="pill">Pytest</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Ce que le projet montre</h2>
+            <ul class="project-list">
+              <li>Conception d'une API propre avec endpoints spécialisés et erreurs structurées.</li>
+              <li>Intégration de métriques NLP à la fois classiques et basées sur des modèles.</li>
+              <li>Création d'un système de plugins pour ajouter des métriques sans casser le coeur de l'application.</li>
+              <li>Capacité à relier back-end technique, interface web et campagne de tests.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Points techniques</h2>
+            <ul class="project-list">
+              <li>`GET /metrics` liste les métriques disponibles au démarrage.</li>
+              <li>`POST /similarity` compare deux phrases en fonction d'une ou plusieurs métriques.</li>
+              <li>`POST /similarity/upload` permet de traiter un lot de paires via un fichier JSON.</li>
+              <li>Les plugins sont chargés automatiquement depuis `plugins/metrics/`.</li>
+              <li>Une interface web intégrée évite de passer uniquement par Swagger ou `curl`.</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Lancer le projet</h2>
+            <p>
+              Le dépôt est prévu pour fonctionner avec un environnement virtuel `.venv`.
+              Une fois les dépendances installées, l'API se lance avec Uvicorn.
+            </p>
+            <pre class="project-code">python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+.venv/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload</pre>
+            <div class="project-note">
+              Le projet comprend aussi des tests ciblés sur les schémas, le registre des
+              métriques, les plugins, l'API et l'interface web.
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

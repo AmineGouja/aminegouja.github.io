@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Détail du projet SAE optimisation autour du problème anneau-étoile en Julia."
+  >
+  <title>SAE Optimisation | Amine Gouja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Retour à l'accueil">
+        <span class="brand-mark">AG</span>
+        <span class="brand-text">Amine Gouja</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../index.html#profil">Profil</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#formation">Formation</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <a class="project-back reveal" href="../index.html#projets">&#8592; Retour aux projets</a>
+
+      <section class="project-hero reveal">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Optimisation combinatoire</p>
+          <h1>SAE optimisation</h1>
+          <p class="project-summary">
+            Ce projet porte sur la résolution du problème de l'anneau-étoile, un problème
+            d'optimisation où il faut sélectionner des stations, affecter des points à ces
+            stations, puis relier les stations retenues par un cycle. L'idée a été de
+            comparer plusieurs stratégies de résolution dans un même dépôt Julia.
+          </p>
+          <div class="project-actions-bar">
+            <a class="button button-primary" href="https://github.com/AmineGouja/SAE_Optimisation" target="_blank" rel="noreferrer">
+              Voir le GitHub
+            </a>
+            <a class="button button-secondary" href="../index.html#contact">Me contacter</a>
+          </div>
+        </div>
+
+        <aside class="project-sidecard">
+          <dl>
+            <div>
+              <dt>Période</dt>
+              <dd>2024 - 2025</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Julia, JuMP, HiGHS, Plots, Makefile</dd>
+            </div>
+            <div>
+              <dt>Approches</dt>
+              <dd>Heuristique, métaheuristique, formulation compacte exacte</dd>
+            </div>
+            <div>
+              <dt>Résultats</dt>
+              <dd>Comparaison sur plusieurs instances et visualisations `.png`</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <div class="project-layout">
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Vue d'ensemble</h2>
+            <p>
+              Le dépôt a été construit comme un terrain d'expérimentation autour d'un même
+              problème combinatoire. Le code permet d'exécuter plusieurs méthodes sur des
+              instances de référence, puis d'observer les résultats dans le terminal et dans
+              des sorties graphiques générées par le projet.
+            </p>
+            <ul class="project-stack">
+              <li class="pill">Julia</li>
+              <li class="pill">JuMP</li>
+              <li class="pill">HiGHS</li>
+              <li class="pill">Plots</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Ce que le projet montre</h2>
+            <ul class="project-list">
+              <li>Capacité à formaliser un problème mathématique et à le traduire en code.</li>
+              <li>Comparaison entre méthodes approchées et méthode exacte sur un même sujet.</li>
+              <li>Prise en main d'un environnement Julia orienté optimisation.</li>
+              <li>Production d'un rapport liant théorie, choix algorithmiques et résultats observés.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Points techniques</h2>
+            <ul class="project-list">
+              <li>Lecture d'instances `.tsp` avec différents jeux de données fournis.</li>
+              <li>Utilisation de `JuMP` et `HiGHS` pour la résolution exacte.</li>
+              <li>Implémentation séparée des stratégies heuristiques et métaheuristiques.</li>
+              <li>Scripts de lancement simplifiés via `make` pour accélérer les essais.</li>
+              <li>Export des résultats sous forme d'images dans le dossier du projet.</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Lancer le projet</h2>
+            <p>
+              Le dépôt prévoit un usage sur machine personnelle ou sur les machines de
+              l'université. Le plus simple est d'utiliser les cibles `make` fournies.
+            </p>
+            <pre class="project-code">make run
+make run_custom FILE=data/berlin52.tsp P=3 ALPHA=1</pre>
+            <div class="project-note">
+              Sur l'environnement de la faculté, il existe aussi des commandes dédiées comme
+              `make install_fac`, `make run_fac` et `make clean_fac`.
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

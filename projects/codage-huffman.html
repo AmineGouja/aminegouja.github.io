@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Détail du projet de codage de Huffman en C pour la compression et la décompression de fichiers."
+  >
+  <title>Codage de Huffman | Amine Gouja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Retour à l'accueil">
+        <span class="brand-mark">AG</span>
+        <span class="brand-text">Amine Gouja</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../index.html#profil">Profil</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#formation">Formation</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <a class="project-back reveal" href="../index.html#projets">&#8592; Retour aux projets</a>
+
+      <section class="project-hero reveal">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Algorithmique / C</p>
+          <h1>Codage de Huffman</h1>
+          <p class="project-summary">
+            Ce projet académique en C met en oeuvre l'algorithme de Huffman pour compresser
+            et décompresser des fichiers texte et binaires simples. Il montre un travail
+            proche de la machine, avec structures de données maison, manipulation binaire et
+            format de compression personnalisé.
+          </p>
+          <div class="project-actions-bar">
+            <a class="button button-primary" href="https://github.com/AmineGouja/Codage_Huffman.git" target="_blank" rel="noreferrer">
+              Voir le GitHub
+            </a>
+            <a class="button button-secondary" href="../index.html#contact">Me contacter</a>
+          </div>
+        </div>
+
+        <aside class="project-sidecard">
+          <dl>
+            <div>
+              <dt>Période</dt>
+              <dd>2024 - 2025</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>C, GCC, fichiers binaires, structures chaînées</dd>
+            </div>
+            <div>
+              <dt>Objectif</dt>
+              <dd>Compresser et décompresser plusieurs types de fichiers</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Arbre de Huffman, format maison, allocation dynamique</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <div class="project-layout">
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Vue d'ensemble</h2>
+            <p>
+              Le projet a été pensé comme un exercice d'algorithmique et d'implémentation bas
+              niveau. À partir des fréquences d'apparition des octets, le programme construit
+              un arbre de Huffman puis encode les données dans un format compressé spécifique
+              au projet.
+            </p>
+            <ul class="project-stack">
+              <li class="pill">C</li>
+              <li class="pill">GCC</li>
+              <li class="pill">Fichiers binaires</li>
+              <li class="pill">Structures dynamiques</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Ce que le projet montre</h2>
+            <ul class="project-list">
+              <li>Manipulation d'algorithmes classiques sans s'appuyer sur des bibliothèques haut niveau.</li>
+              <li>Conception d'un format de stockage compressé adapté au projet.</li>
+              <li>Gestion d'allocations dynamiques, d'arbres et de files ordonnées.</li>
+              <li>Travail sur des entrées texte mais aussi sur des fichiers binaires simples.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Points techniques</h2>
+            <ul class="project-list">
+              <li>Construction d'un arbre de Huffman à partir des fréquences des octets.</li>
+              <li>Encodage en codes binaires de longueur variable.</li>
+              <li>Lecture et écriture d'un en-tête avec table de correspondance.</li>
+              <li>Pipeline de décompression dédié avec reconstruction des données originales.</li>
+              <li>Tests sur plusieurs fichiers d'entrée comme texte, BMP et JPG.</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Lancer le projet</h2>
+            <p>
+              Le projet se compile simplement avec GCC. Deux exécutables distincts sont
+              prévus pour la compression et la décompression.
+            </p>
+            <pre class="project-code">gcc CodageHuffman.c -lm -o CodageHuffman
+gcc decompresser.c -o decompresser
+
+./CodageHuffman vingtmille.txt
+./decompresser compression_vingtmille.txt</pre>
+            <div class="project-note">
+              Le format produit est spécifique au projet et pourrait encore être renforcé par
+              une meilleure modularisation et davantage de tests automatiques.
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Détail du projet Ferme autosoutenable, une simulation Java orientée objet avec interface Swing."
+  >
+  <title>Ferme Autosoutenable | Amine Gouja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Retour à l'accueil">
+        <span class="brand-mark">AG</span>
+        <span class="brand-text">Amine Gouja</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../index.html#profil">Profil</a>
+        <a href="../index.html#projets">Projets</a>
+        <a href="../index.html#formation">Formation</a>
+        <a href="../index.html#competences">Compétences</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <a class="project-back reveal" href="../index.html#projets">&#8592; Retour aux projets</a>
+
+      <section class="project-hero reveal">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Programmation orientée objet</p>
+          <h1>Ferme autosoutenable</h1>
+          <p class="project-summary">
+            Projet Java de simulation agricole avec interface Swing. Le joueur gère une ferme
+            sur une grille, investit son budget, place animaux et cultures, puis observe une
+            simulation saisonnière où l'eau, la nourriture, le fertilisant, la croissance et
+            la reproduction interagissent.
+          </p>
+          <div class="project-actions-bar">
+            <a class="button button-primary" href="https://github.com/AmineGouja/Ferme_Autosoutenable" target="_blank" rel="noreferrer">
+              Voir le GitHub
+            </a>
+            <a class="button button-secondary" href="../index.html#contact">Me contacter</a>
+          </div>
+        </div>
+
+        <aside class="project-sidecard">
+          <dl>
+            <div>
+              <dt>Période</dt>
+              <dd>2024 - 2025</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Java, Swing, modélisation objet, simulation saisonnière</dd>
+            </div>
+            <div>
+              <dt>Moteur</dt>
+              <dd>Budget, saisons, ressources, croissance, reproduction et mortalité</dd>
+            </div>
+            <div>
+              <dt>Interface</dt>
+              <dd>Fenêtre graphique et grille 6x6 avec suivi des statistiques</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <div class="project-layout">
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Vue d'ensemble</h2>
+            <p>
+              Ce projet illustre la construction d'un mini-système complet orienté objet. La
+              ferme évolue sur plusieurs saisons, avec des interactions cohérentes entre
+              animaux, plantes, puits, réservoirs et règles de croissance ou de consommation.
+            </p>
+            <ul class="project-stack">
+              <li class="pill">Java</li>
+              <li class="pill">Swing</li>
+              <li class="pill">POO</li>
+              <li class="pill">Simulation</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Ce que le projet montre</h2>
+            <ul class="project-list">
+              <li>Conception orientée objet avec héritage, polymorphisme et spécialisation des comportements.</li>
+              <li>Traduction de règles métier en classes, états et interactions cohérentes.</li>
+              <li>Capacité à relier moteur de simulation et interface graphique desktop.</li>
+              <li>Organisation du code entre données, logique métier et rendu graphique.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-section reveal">
+            <h2>Points techniques</h2>
+            <ul class="project-list">
+              <li>Simulation de 4 saisons de 30 jours avec effets propres à chaque période.</li>
+              <li>Gestion du budget, des achats, des placements et des ressources disponibles.</li>
+              <li>Production de nourriture et fertilisant par les animaux.</li>
+              <li>Consommation d'eau et de fertilisant par les plantes avec suivi de croissance.</li>
+              <li>Affichage graphique de la ferme et des statistiques en temps réel via Swing.</li>
+            </ul>
+          </article>
+
+          <article class="project-section reveal">
+            <h2>Lancer le projet</h2>
+            <p>
+              Le projet se compile directement avec `javac`, puis s'exécute via la classe
+              d'entrée `Jeu`.
+            </p>
+            <pre class="project-code">javac *.java
+java Jeu</pre>
+            <div class="project-note">
+              Une piste naturelle d'évolution serait de séparer davantage la logique métier de
+              l'interface et d'ajouter des tests automatisés sur les règles de simulation.
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
